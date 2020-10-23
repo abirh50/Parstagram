@@ -175,7 +175,7 @@
                     <navigationItem key="navigationItem" id="inZ-5Z-cKv">
                         <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="RPi-gr-rWc">
                             <connections>
-                                <segue destination="jVJ-zQ-Q3f" kind="presentation" id="qfe-oI-o5S"/>
+                                <segue destination="jVJ-zQ-Q3f" kind="presentation" identifier="camera" id="qfe-oI-o5S"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

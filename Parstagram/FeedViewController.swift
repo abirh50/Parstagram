@@ -35,13 +35,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!
+                self.posts.reverse()
                 self.tableView.reloadData()
             }
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "camera"{
+            let vc = segue.destination as! CameraViewController
+            vc.modalPresentationStyle = .fullScreen
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
