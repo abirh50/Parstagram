@@ -18,14 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // --- Copy this only
             
-            let parseConfig = ParseClientConfiguration {
-                    $0.applicationId = "uvPXcrUiWMJQKYWs90bUpxorXsjDCuqxUCIZTnDm" // <- UPDATE
-                    $0.clientKey = "41QmwjvDjJIUi9yMhcM9SJwrVJkAVfE1HA8ST4AG" // <- UPDATE
-                    $0.server = "https://parseapi.back4app.com"
-            }
-            Parse.initialize(with: parseConfig)
+        let parseConfig = ParseClientConfiguration {
+            $0.applicationId = "uvPXcrUiWMJQKYWs90bUpxorXsjDCuqxUCIZTnDm" // <- UPDATE
+            $0.clientKey = "41QmwjvDjJIUi9yMhcM9SJwrVJkAVfE1HA8ST4AG" // <- UPDATE
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: parseConfig)
             
             // --- end copy
+        
         
         return true
     }
